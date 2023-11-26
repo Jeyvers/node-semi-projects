@@ -112,3 +112,7 @@ server.listen(4999);
 #### NOTES
 
     - Static assets refer files that the server doesn't have to change.
+    - The middleware in node. js is a function that will have all the access for requesting an object, responding to an object, and moving to the next middleware function in the application request-response cycle.
+        - 1)Express app receives a request when someone hits a server for which it will create
+
+request and response. - 2)middleware is used to manipulate request. - 3)It is middleware because it is a function that run between request and response cycle. - 4) middleware stack. middleware that appear first will run first. - 5)middleware is like pipeline which end with response object.
