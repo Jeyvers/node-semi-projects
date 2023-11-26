@@ -1,13 +1,10 @@
 const express = require("express");
-const path = require("path");
 
 const app = express();
-
-app.use(express.static("./public"));
+const { products } = require("./data");
 
 app.get("/", (req, res) => {
- res.sendFile(path.resolve(__dirname, "./navbar-app/index.html"));
- // or path.join()
+ res.json(products);
 });
 
 app.all("*", (req, res) => {
