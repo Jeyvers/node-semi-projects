@@ -104,3 +104,11 @@ const server = http.createServer(function (req, res) {
 
 server.listen(4999);
 ```
+
+#### BUG FIX LIST
+
+- Port 4999 not responding; there was a second bracket surrounding the port code
+
+#### NOTES
+
+    - Static assets refer files that the server doesn't have to change.
