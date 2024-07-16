@@ -10,20 +10,14 @@ require("dotenv").config();
 // const errorHandlerMiddleware = require("./middleware/error-handler");
 
 // middleware
+app.use(express.static("./public"));
 // if we don't use this, we won't have the data in req.body
 app.use(express.json());
-// app.use(express.static("./public"));
 
 // ROOT ROUTE
 app.use("/api/v1/tasks", tasks);
 
 const port = 3000;
-
-// app.get(`/api/v1/tasks`) - get all the tasks
-// app.post(`/api/v1/tasks`) - create a new task
-// app.get(`/api/v1/tasks/:id`) - get a single task
-// app.patch(`/api/v1/tasks/:id`) - update task
-// app.delete(`/api/v1/tasks/:id`) - delete task
 
 const start = async () => {
  try {
@@ -34,3 +28,5 @@ const start = async () => {
  }
 };
 start();
+
+// left off: 2:16:35
