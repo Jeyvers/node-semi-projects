@@ -6,7 +6,7 @@ require("dotenv").config();
 // const tasks = require("./routes/tasks");
 // const connectDB = require("./db/connect");
 // require("dotenv").config();
-// const notFound = require("./middleware/not-found");
+const notFound = require("./middleware/not-found");
 // const errorHandlerMiddleware = require("./middleware/error-handler");
 
 // middleware
@@ -16,6 +16,7 @@ app.use(express.json());
 
 // ROOT ROUTE
 app.use("/api/v1/tasks", tasks);
+app.use(notFound);
 
 const port = 3000;
 
@@ -29,4 +30,4 @@ const start = async () => {
 };
 start();
 
-// left off: 2:21:57
+// left off: 2:36:57
